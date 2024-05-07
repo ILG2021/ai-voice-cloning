@@ -1,5 +1,6 @@
 import os
 import argparse
+import sys
 import time
 import json
 import base64
@@ -19,6 +20,7 @@ from datetime import datetime
 import tortoise.api
 from tortoise.utils.audio import get_voice_dir, get_voices
 from tortoise.utils.device import get_device_count
+sys.path.append(".")
 from modules.tortoise_dataset_tools.dataset_whisper_tools.dataset_maker_large_files import *
 from modules.tortoise_dataset_tools.dataset_whisper_tools.combine_folders import *
 

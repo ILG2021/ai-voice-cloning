@@ -1,4 +1,7 @@
 import os
+
+# from rvc_infer import rvc_convert
+
 if 'XDG_CACHE_HOME' not in os.environ:
 	os.environ['XDG_CACHE_HOME'] = os.path.realpath(os.path.join(os.getcwd(), './models/'))
 
@@ -45,7 +48,6 @@ from tortoise.utils.text import split_and_recombine_text
 from tortoise.utils.device import get_device_name, set_device_name, get_device_count, get_device_vram, get_device_batch_size, do_gc
 # TODO: The below import blocks any CLI parameters.
 #       Try running with --low-vram
-from rvc_pipe.rvc_infer import rvc_convert
 
 MODELS['dvae.pth'] = "https://huggingface.co/jbetker/tortoise-tts-v2/resolve/3704aea61678e7e468a06d8eea121dba368a798e/.models/dvae.pth"
 
